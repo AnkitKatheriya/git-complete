@@ -1,6 +1,6 @@
 # git-complete
 
-What is Git?
+##What is Git?
 1) Distributed source control system
 2) Massively scales
 3) Open Source
@@ -10,7 +10,7 @@ What is Git?
 7) Active community
 8) Most popular DVCS, VCS
 
-Key Concepts:
+##Key Concepts:
 1) Repository contains files, history, config managed by Git. 
 2) Three States of Git
 	i) Working directory
@@ -19,7 +19,7 @@ Key Concepts:
 3)	Remote repository (GitHub)
 4)	Master branch
 
-Git Installation:
+##Git Installation:
 1) Windows
 	Git for Windows(git-scm.com)
 	Google Chrome (install in Bonus section, very optional)
@@ -33,12 +33,12 @@ Git Installation:
 	https://github.com/git-for-windows/git/releases
 	
 
-Quick Start Part1 : Starting with Github and Project Setup
+##Quick Start Part1 : Starting with Github and Project Setup
 1) Create an account using https://github.com
 2) Create a project
 3) Create a repository
 
-Quick Start Part2 : Configuration, Clone, and Git Basic Workflow
+##Quick Start Part2 : Configuration, Clone, and Git Basic Workflow
 check version using command -> git version
 $ git config --global user.name "Ankit Katheriya"
 $ git config --global user.password "Archive@18"
@@ -51,7 +51,7 @@ git add <name of the files>
 git commit -m 'Adding the new file'
 git push origin master(branch name to push)
 
-Text editor Installation overview:
+##Text editor Installation overview:
 1) Windows
 	Notepad++
 	Bash alias
@@ -63,12 +63,12 @@ Text editor Installation overview:
 	Commands
 	Git Config Files
 
-Windows Text Editor: Notepad++ Installation:
+##Windows Text Editor: Notepad++ Installation:
 1) Download and install notepad++ from its official website.
 2) Update the path environment variables for notepad++ utility.
 3) open cmd and type notepad++ to check if it is working
 
-Configure Notepad++ with Git(Windows only):
+##Configure Notepad++ with Git(Windows only):
 1) using cmd type -> notepad++ .bash_profile
 2) add below text in .bash_profile file
 	alias npp='notepad++.exe -multiInst -nosession'
@@ -78,7 +78,7 @@ Configure Notepad++ with Git(Windows only):
 6) $ git config --global core.editor "notepad++.exe -multiInst -nosession"
 7) $ git config --global -e
 
-Git Basic Overview:
+##Git Basic Overview:
 1) Starting a Project
 	Fresh (no source yet)
 	Existing source locally
@@ -88,7 +88,7 @@ Git Basic Overview:
 4) History and Aliases
 5) Ignoring Unwanted Files
 
-Starting with a Fresh Project (git init)
+##Starting with a Fresh Project (git init)
 1) Copy dummy text from http://hipsum.co website
 2) create a directory <projects>
 3) git init fresh-project
@@ -101,7 +101,7 @@ Starting with a Fresh Project (git init)
 10) git commit (notepad++ would be open, now enter the comment)
 11) rm -rf <folder_name> to remove the folder
 
-Adding Git to an Existing Project (git init)
+##Adding Git to an Existing Project (git init)
 1) http://initializr.com
 2) Navigate to the project folder
 3) unzip ~/Downloads/initializr-verekia-4.0.zip
@@ -114,7 +114,7 @@ Adding Git to an Existing Project (git init)
 10) if we want to do that the project should not be managed by the git anymore, perform the below command.
 	rm -rf .git
 
-Starting on GitHub by joining an Existing Project(git clone)
+##Starting on GitHub by joining an Existing Project(git clone)
 1) Login on Github using ur account credentials
 2) Navigate to any of the URL :- 
 	http://bitly.com/git-start-web
@@ -123,7 +123,7 @@ Starting on GitHub by joining an Existing Project(git clone)
 4) Copy the Git URL of this forked project and then run below mentioned command.
    git clone "<Git project URL>"
    
-Basic Git Workflow (add, commit, pull and push)
+##Basic Git Workflow (add, commit, pull and push)
 1) Useful websites
 	http://bitly.com/git-start-web
 	https://meettheipsums.com/
@@ -136,7 +136,7 @@ Basic Git Workflow (add, commit, pull and push)
 7) git pull origin master
 8) git push origin master
 
-Tracked files:
+##Tracked files:
 1) notepad++ ~/.gitconfig
 2) naviaget to the git-complete project directory using cmd on local
 3) Now update the existing hipster.txt file using below command
@@ -149,9 +149,9 @@ Tracked files:
 9) git add newfile.txt
 10) git ls-files (Now newfile.txt would be visible here)
 
-Editing files:
+##Editing files:
 
-Recursive Add:
+##Recursive Add:
 1) Navigate to the current git project using cmd
 2) mkdir -p level1/level2/level3
 3) cd level1
@@ -167,7 +167,7 @@ Recursive Add:
 12) git status
 13) git commit -m "Adding several files recursivly"
 
-Backing Out Changes:
+##Backing Out Changes:
 1) Navigate to the level1file.txt and do some changes into it
 2) git add level1file.txt
 3) git status
@@ -177,7 +177,7 @@ Backing Out Changes:
 7) git checkout -- level1file.txt (To remove working directory changes)
 	(Working directory changes will also removed)
 
-Renaming and moving files:
+##Renaming and moving files:
 1) Navigate to the file which you want to rename
 2) git mv <currentFileName> <newFileName>
 3) git status
@@ -202,10 +202,9 @@ Renaming and moving files:
 8) git add level1.txt (updated file name)
 9) git add -u (Now it will correctly say renamed the level1file.txt to level1.txt)
 
-Deleting files:
+##Deleting files:
 1) create the file -> notepad++ doomed.txt
 2) remove the file using OS command -> rm doomed.txt
-
 3) git rm newfile.txt
 4) git status
 5) Git will show the file nefile.txt has been deleted
@@ -219,7 +218,7 @@ Deleting files:
 4) git checkout -- hipster.txt
 5) ls (Now file would be available)
 
-History:
+##History:
 1) git help log
 2) git log
 	Tips: press q to exit from the log screen
@@ -231,7 +230,7 @@ History:
 8) git show <commitId> (like git show 33af11b2185d8ff833492f99d0b8141c76a69406)
 9) git log --all --graph --decorate --oneline
 
-Git Alias:
+##Git Alias:
 1) It is used to search the short the search command
 2) like -> git config --global alias.hist "log --all --oneline --graph --decorate"
 3) We have setup search command with hist keyword
@@ -239,13 +238,12 @@ Git Alias:
 5) If we want to update these commands later -> then first open .gitconfig file and upadte it accordingly
 6) notepad++ ~/.gitconfig
 
-Ignoring unwanted Files and Folders:
+##Ignoring unwanted Files and Folders:
 1) ls -al (Command to show all hidden files)
 2) Git Ignore Patter Examples:
 	Specific file: MyFile.txt
 	File Pattern: *.ext
 	Folder: my-folder/
-	
 3) check if .gitignore file already exists using ls -al command, and if not created then create it using below command 
 4) notepad++ .gitignore
 	add few lines 
@@ -259,5 +257,43 @@ Ignoring unwanted Files and Folders:
 10) ll
 11) cp access.log access.2014-11-04
 12) git status ( will not show any log folder inside git status command)
-13)  
- 
+13) git commit -am "Excluding log file directory"
+
+##Cleanup and Back to Origin (GitHub)
+1) git pull origin master
+2) git push origin master
+
+##Visual Merge/Diff tool Installation overview
+1) Windows:
+		P4Merge for Windows
+		Git configuraton
+	MAC OS X
+		P4Merge for Mac OS X
+		Git configuration
+	Resources
+		Commands
+		Git COnfig Files
+2) Download and installP4Merger from below link
+	https://www.perforce.com/downloads/visual-merge-tool
+
+3)	P4merge configure on windows 
+Update path variable to open p4merge using cmd (C:\Program Files\Perforce)
+
+4) P4Merge for WIndows Git Configuration:
+open git bash and perform below command
+git config --global merge.tool p4merge
+git config --global mergetool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+git config --global mergetool.prompt false
+git config --global diff.tool p4merge
+git config --global difftool.p4merge.path "C:/Program Files/Perforce/p4merge.exe"
+git config --global difftool.prompt false
+git config --global --list
+git config --global -e
+
+
+##Git Repository Setup (for comparing examples)
+
+
+
+	
+
