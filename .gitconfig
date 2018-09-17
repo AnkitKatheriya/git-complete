@@ -16,3 +16,5 @@
 	path = C:/Program Files/Perforce/p4merge.exe
 [difftool]
 	prompt = false
+[alias]
+	hist = log --all --oneline --graph --decorate

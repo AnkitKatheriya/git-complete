@@ -198,5 +198,66 @@ Renaming and moving files:
 4) git status
 5) git add -A
 6) git commit -m "Moving back level2 file to level2 directory"
+7) now update the file name using window, by directly reaching to that file and updating the name to (from level1file.txt to level1.txt)
+8) git add level1.txt (updated file name)
+9) git add -u (Now it will correctly say renamed the level1file.txt to level1.txt)
 
+Deleting files:
+1) create the file -> notepad++ doomed.txt
+2) remove the file using OS command -> rm doomed.txt
 
+3) git rm newfile.txt
+4) git status
+5) Git will show the file nefile.txt has been deleted
+6) git commit -m "Deleting the new file"
+7) git status
+	How to backout staged deletion:
+1) git rm hipster.txt
+2) git reset HEAD hipster.txt
+3) git status
+5) ls (hipster.txt file will not available at local directory)
+4) git checkout -- hipster.txt
+5) ls (Now file would be available)
+
+History:
+1) git help log
+2) git log
+	Tips: press q to exit from the log screen
+3) git log --oneline --graph --decorate
+4) git log 0269de0...59d6266
+5) git log --since="3 days ago"
+6) git log -- hipster.txt
+7) git log --follow -- level1/level2/level2.txt (To check the rename history of the file)
+8) git show <commitId> (like git show 33af11b2185d8ff833492f99d0b8141c76a69406)
+9) git log --all --graph --decorate --oneline
+
+Git Alias:
+1) It is used to search the short the search command
+2) like -> git config --global alias.hist "log --all --oneline --graph --decorate"
+3) We have setup search command with hist keyword
+4) now perform -> git hist
+5) If we want to update these commands later -> then first open .gitconfig file and upadte it accordingly
+6) notepad++ ~/.gitconfig
+
+Ignoring unwanted Files and Folders:
+1) ls -al (Command to show all hidden files)
+2) Git Ignore Patter Examples:
+	Specific file: MyFile.txt
+	File Pattern: *.ext
+	Folder: my-folder/
+	
+3) check if .gitignore file already exists using ls -al command, and if not created then create it using below command 
+4) notepad++ .gitignore
+	add few lines 
+	*.log
+	log/
+5) Add a new file with extension .log (like access.log)
+6) Now perform -> git status (Due to gitignore file it will not show .log file in git status command)
+7) mkdir log
+8) mv access.log log
+9) cd log
+10) ll
+11) cp access.log access.2014-11-04
+12) git status ( will not show any log folder inside git status command)
+13)  
+ 
