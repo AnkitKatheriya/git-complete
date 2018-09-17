@@ -186,5 +186,13 @@ Renaming and moving files:
 6) cd ..
 7) mv level2file.txt level2.txt
 8) git will take it as you performed two operation here
+9) git add -A
+10) git commit -m "Renamed the level2 file".
+11) git mv <oldFileName> <newFileName> (git mv level2.txt 2.txt)
+12) git mv <newFileName> <OldFileName> (git mv 2.txt level2.txt)
 
+	Move the file to another directory
+1) git mv <filenameToMove> <FolderNameInWhichMoving> (git mv level2.txt level3)
+2) Now command to move file without using git command (or using bash command)
+3) mv level2.txt ..
 
