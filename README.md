@@ -291,7 +291,19 @@ git config --global --list
 git config --global -e
 
 
-##Git Repository Setup (for comparing examples)
+Git Repository Setup (for comparing examples)
+
+##Comparing Working Directory and the Staging Area
+git diff
+git difftool - (to see visual changes)
+
+##Comparing Working directory and git Repository
+git diff HEAD
+git difftool HEAD
+
+##Comparing between the Staging Area and teh Git Repository (Last commit)
+git diff --staged HEAD
+git difftool --staged HEAD
 
 
 
