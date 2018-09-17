@@ -317,6 +317,26 @@ git difftool 839e896 HEAD
 git difftool HEAD HEAD^ 
 
 ##Comparing between Local and Remote Master Branches
+git diff master origin/master
+git difftool master origin/master
+
+##Comparison Section Cleanup and Push back to GitHub
+
+#Branching and Merging
+##Branching Basics
+git branch -a
+git branch <newBranchName>
+git checkout mynewbranch (to move to a new branch)
+git log --oneline --decorate
+git checkout master
+git branch -m mynewbranch newbranch (To move a branch to another branch)
+git branch -d newbranch (to delete a branch)
+
+##Happy path / Fast Forward Merges
+git checkout -b title-change
+git 
+
+
 
 
 	
