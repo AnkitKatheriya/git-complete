@@ -305,6 +305,18 @@ git difftool HEAD
 git diff --staged HEAD
 git difftool --staged HEAD
 
+##Limiting Comparsons to one File (or path)
+git diff -- README.md
+git difftool -- README.md
+
+##Comparing between commits
+git log --oneline (to know the commit id)
+git diff 839e896 HEAD
+git diff HEAD HEAD^
+git difftool 839e896 HEAD
+git difftool HEAD HEAD^ 
+
+##Comparing between Local and Remote Master Branches
 
 
 	
