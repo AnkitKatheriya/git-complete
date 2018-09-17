@@ -317,6 +317,11 @@ git difftool 839e896 HEAD
 git difftool HEAD HEAD^ 
 
 ##Comparing between Local and Remote Master Branches
+git checkout -b <newbranchname> (Here name is title-change)
+(update or add any file and commit it to the new branch, in this example new branch is title-change)
+git diff master title-change 
+git difftool master title-change
+
 
 
 	
