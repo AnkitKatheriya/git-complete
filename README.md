@@ -353,6 +353,142 @@ git branch -d newbranch (to delete a branch)
 git merge <branch-name> --no-ff
 
 ##Automatic merges
+git checkout -b simple-changes
+git merge simple-changes -m "Merging changes from simple-changes branch"
+
+Conflicting Merges and Resolution
+git checkout -b realwork
+do some changes in this branch and push the data to this branch
+git diff master realwork
+git merge realwork
+source control tool
+git mergetool
+git commit -m "Done resolving merge conflicts"
+notepad++ <filename>.orig ( Git always saves an original copy to revert the changes)
+
+
+inside .gitignore file add an entry ( *.orig )
+git commit -m "Updating gitignore file to exclude merge tmp changes"
+
+
+Section cleanup and push back to GitHub
+git push origin master
+
+##Rebasing - (Rebase is a kind of merge + squash)
+===============
+Simple Rebase example			(git commit -am "commit message is known as express commit")
+switch to the branch you want to rebase
+git checkout -b rebsebranch
+git rebase <source branch name> ( git rebase master )
+
+Setup for rebasing conflicts
+
+Abort a rebase:
+git rebase --abort
+
+Rebase Conflict and Resolution
+resolve the conflict using merge tool
+git mergetool
+git rebase --continue
+
+Pull with Rebase (GitHub)
+git fetch origin master
+git pull --rebase origin master
+
+Section cleanup and push to GitHub
+Tip:- git rebase -i origin/master
+
+##Stashing - (To save the current changes - work with the HEAD version)
+===============
+Simple stash example
+git stash
+git stash apply ( to apply the stash change on our working directory)
+git stash list ( to see list of all stash)
+git stash drop
+
+Stashing Untracked Files and Using Pop
+git ls-files
+do the change into a file and add a new file
+Run the git stash command (git stash command will only stash the updated file, but exclude the newly added file or untracked file)
+git stash -u ( to include any untracked file as well)
+git stash pop ( to drop last stash in a stash list)
+
+Managing Multiple Stashs
+git stash save "type stash message here"
+do multiple changes and perform this command each time
+git stash list
+git stash show stash@{1} (To show list of all files in the specific list)
+git stash apply stash@{1} (It will implement the second stash in stash list)
+git stash drop stash@{1}
+git stash clear ( To remove all stash in the stash list)
+
+Stashing into a branch
+git stash -u
+git stash branch <branchname> (new branch would be created -> switched to that branch -> stash would be apply on this branch -> and at the end same stash would be dropped)
+
+Section cleanup and push to GitHub
+git pull origin master
+git push origin master
+
+
+##Tagging: (Tagging is nothing more than labeling)
+===============
+Simple tag Example/Lightweight Tags
+git tag <myTag>
+git tag --list
+git show <myTag>
+git tag --delete <myTag>
+
+Annotated Tags
+git tag -a v-1.0 
+git show v-1.0
+
+Comparing Tags:
+git commit --amend
+git tag v-1.2 -m "Release 1.2"
+git diff v-1.2 v1.1
+git difftool v-1.2 v1.1
+
+Tagging a specific commit:
+using git log --oneline --graph --decorate --all (find the commit id, which ever you want to tag)
+git tag -a v-0.9-beta <commit_id>
+
+Updating Tags:
+1) One approach is to delete the current tag and create a new tag
+2) git tag -a v-0.8-alpha -f <correct_commit_id>
+
+Using tags with GitHub
+git push origin v-0.9-beta
+GitHub releases are tracked by tags
+
+git tag --list
+git push origin :v-0.8-alpha ( command to delete the tag name which is accidently commit on GitHub)
+
+
+##Reset and Reflog:
+git reset HEAD^1
+git reset HEAD^^
+git reflog ( Its a log of what we ever did on git repository)
+git reset <commit_id>
+git reset HEAD@{2}
+
+##Comparing Branches via GitHub 
+
+##Comparing Branches via command Line
+git fetch origin test-branch
+git diff master <otherBranchName>
+
+
+##Stash vs Branch
+
+
+##Git Help
+git help
+git help stash
+
+##Cherry Pick
+git cherry pick <commit_id>
+
 
 	
 
